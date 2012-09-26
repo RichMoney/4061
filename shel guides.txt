@@ -1,0 +1,9 @@
+http://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html#Implementing-a-Shell
+
+http://www.ladweb.net/
+
+http://people.clarkson.edu/~jmatthew/os/homework/shell/
+
+http://stackoverflow.com/questions/4788374/writing-a-basic-shell-for-linux-in-c
+
+http://bytes.com/topic/c/answers/215994-writing-shell-c
