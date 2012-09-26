@@ -18,6 +18,7 @@ int main (int argc, char *argv[])
     char cmd[maxSize];
     char myLittleProgram[maxSize];
     char myLittleArguments[maxSize];
+    char myLittlePath[] = "/bin/";
     
     while (69)
     {
@@ -50,20 +51,11 @@ int main (int argc, char *argv[])
             return 0;
         else
         {
-            char path[maxSize] = "/bin/";
-            strlcat(path, myLittleProgram);
-            printf(path);
-            execlp(fullPath, myLittleProgram, NULL);
-            break;
+            strcat(myLittlePath, myLittleProgram);
+            execlp(myLittlePath, myLittleProgram, NULL);
         }
         
     }
     
     return 0;
-}
-
-char[] createPath()
-{
-    char path[];
-    
 }

@@ -53,10 +53,6 @@ int main (int argc, char *argv[])
           printf(myLittleOutput);
           return 0;
         }
-
-
-
     }
-
     return 0;
 }
