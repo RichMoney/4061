@@ -1,9 +1,9 @@
 //
-//  Blue Shell.c
+//  myLittleShellScript.c
 //
 //
 //  Created by Brian Salter on 9/15/12.
-//
+//  Rich Jeffery, Chris Arcand
 //
 
 #include <stdio.h>
@@ -52,10 +52,10 @@ int main (int argc, char *argv[])
             i++;
             j++;
         }
-        
+
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
-           
+
         if (!strcmp(myLittleProgram, "exit"))
            return 0;
 
@@ -70,15 +70,22 @@ int main (int argc, char *argv[])
         {
             pid = fork(); //create child
             if (pid == 0) //if child
-            { 
+            {
                 strcat(myLittlePath, myLittleProgram);
 //              printf("%c%s%c\n%c%s%c\n%c%s%c\n", '|', myLittlePath, '|', '|', myLittleProgram, '|', '|', myLittleArguments, '|');
                 if (!strcmp(myLittleArguments, ""))
                 {
-                   execlp(myLittlePath, myLittleProgram, NULL);
+                   int successcode = execlp(myLittlePath, myLittleProgram, NULL);
+                   if (successcode == -1) {
+                        printf("%s%s%s\n", "Command '", myLittleProgram, "' not found!");
+                   }
                 }
-                else
-                    execlp(myLittlePath, myLittleProgram, myLittleArguments, NULL);
+                else {
+                   int successcode = execlp(myLittlePath, myLittleProgram, myLittleArguments, NULL);
+                   if (successcode == -1) {
+                        printf("%s%s%s\n", "Command '", myLittleProgram, "' not found!");
+                   }
+                }
                 return 0;
             }
             else //if parent
