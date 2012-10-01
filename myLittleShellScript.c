@@ -19,6 +19,7 @@ int main (int argc, char *argv[])
     char myLittleProgram[maxSize];
     char myLittleArguments[maxSize];
     char myLittlePath[] = "/bin/";
+    char *myLittleEnv[maxSize];
     
     while (69)
     {
@@ -47,14 +48,21 @@ int main (int argc, char *argv[])
             j++;
         }
         
-        if (!strcmp(myLittleProgram, "exit"))
-            return 0;
-        else
-        {
-            strcat(myLittlePath, myLittleProgram);
-            execlp(myLittlePath, myLittleProgram, NULL);
-        }
-        
+        switch (myLittleProgram = ) {
+            case "exit":
+                return 0;
+                break;
+            case "myshowenv"
+                getenv();
+                break;
+            case "mysetenv"
+                setenv();
+                break;
+            default:
+                strcat(myLittlePath, myLittleProgram);
+                execlp(myLittlePath, myLittleProgram, NULL);
+                continue;
+        }       
     }
     
     return 0;
