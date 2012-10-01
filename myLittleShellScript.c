@@ -27,6 +27,8 @@ int main (int argc, char *argv[])
         printf("Command: ");
         fgets(cmd, maxSize, stdin);
         char myLittlePath[] = "/bin/";
+        strcpy(myLittleArguments, "");
+//      printf("%c%s%c\n%c%s%c\n%c%s%c\n", '|', myLittlePath, '|', '|', myLittleProgram, '|', '|', myLittleArguments, '|');
 
         // Replaces the newline with a null character for printf
         char *newline = strchr(cmd, '\n');
@@ -43,13 +45,17 @@ int main (int argc, char *argv[])
             myLittleProgram[i] = cmd[i];
             i++;
         }
+        myLittleProgram[i] = '\0';
         while (i < maxSize && cmd[i] != '\0')
         {
             myLittleArguments[j] = cmd[i];
             i++;
             j++;
         }
-
+        
+        if (strcmp(myLittleArguments, ""))
+           myLittleArguments[j] = '\0';
+           
         if (!strcmp(myLittleProgram, "exit"))
            return 0;
 
@@ -63,10 +69,17 @@ int main (int argc, char *argv[])
         else
         {
             pid = fork(); //create child
-            if (pid == 0) { //if child
+            if (pid == 0) //if child
+            { 
                 strcat(myLittlePath, myLittleProgram);
-                execlp(myLittlePath, myLittleProgram, NULL);
-                exit(0);
+//              printf("%c%s%c\n%c%s%c\n%c%s%c\n", '|', myLittlePath, '|', '|', myLittleProgram, '|', '|', myLittleArguments, '|');
+                if (!strcmp(myLittleArguments, ""))
+                {
+                   execlp(myLittlePath, myLittleProgram, NULL);
+                }
+                else
+                    execlp(myLittlePath, myLittleProgram, myLittleArguments, NULL);
+                return 0;
             }
             else //if parent
             {
