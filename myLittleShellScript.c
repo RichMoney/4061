@@ -18,13 +18,13 @@ int main (int argc, char *argv[])
     char cmd[maxSize];
     char myLittleProgram[maxSize];
     char myLittleArguments[maxSize];
-    char myLittlePath[] = "/bin/";
     char *myLittleEnv[maxSize];
     
     while (69)
     {
         printf("Command: ");
         fgets(cmd, maxSize, stdin);
+        char myLittlePath[] = "/bin/";
         
         // Replaces the newline with a null character for printf
         char *newline = strchr(cmd, '\n');
@@ -48,21 +48,21 @@ int main (int argc, char *argv[])
             j++;
         }
         
-        switch (myLittleProgram = ) {
-            case "exit":
-                return 0;
-                break;
-            case "myshowenv"
-                getenv();
-                break;
-            case "mysetenv"
-                setenv();
-                break;
-            default:
-                strcat(myLittlePath, myLittleProgram);
-                execlp(myLittlePath, myLittleProgram, NULL);
-                continue;
-        }       
+        if (!strcmp(myLittleProgram, "exit"))
+           return 0;
+        
+        else if (!strcmp(myLittleProgram, "mylittleenv"))
+        {
+             char * env = getenv("PATH");
+             printf(env);
+             continue;
+        }
+             
+        else
+        {
+            strcat(myLittlePath, myLittleProgram);
+            execlp(myLittlePath, cmd, NULL);
+        }
     }
     
     return 0;
