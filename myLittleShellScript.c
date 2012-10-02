@@ -22,6 +22,7 @@ int main (int argc, char **argv, char **envp)
     char *myLittleEnv[maxSize];
     pid_t pid;
     char **env = envp;
+    int isBackground = 0;
 
     while (69)
     {
@@ -37,7 +38,7 @@ int main (int argc, char **argv, char **envp)
             *newline = '\0';
 
         printf("%s%s\n", "Executing command: ", cmd);
-
+        
         int i = 0;
         int j = 0;
 
@@ -54,10 +55,17 @@ int main (int argc, char **argv, char **envp)
             i++;
             j++;
         }
-
+        
+        if (myLittleArguments[j-1] == '&')
+        {
+         printf("%s", "in the background.");
+         isBackground = 1;
+         myLittleArguments[j-1] = '\0';
+        }
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
 
+                   
         if (!strcmp(myLittleProgram, "exit") || (!strcmp(myLittleProgram, "quit")))
            return 0;
 
@@ -108,10 +116,17 @@ int main (int argc, char **argv, char **envp)
             }
             else //if parent
             {
-                waitpid(pid); //wait for child
+                if (!isBackground) //if our command isn't supposed to be in the background
+                    waitpid(pid); //wait for child
+                if (isBackground)
+                    printf("%s","\n");
             }
         }
     }
 
     return 0;
 }
+
+
+
+
