@@ -11,7 +11,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main (int argc, char *argv[])
+int main (int argc, char **argv, char **envp)
 {
     printf("Welcome to My Little Shell!  Try not to disturb the ponies.\n\n");
 
@@ -21,6 +21,7 @@ int main (int argc, char *argv[])
     char myLittleArguments[maxSize];
     char *myLittleEnv[maxSize];
     pid_t pid;
+    char **env = envp;
 
     while (69)
     {
@@ -46,6 +47,7 @@ int main (int argc, char *argv[])
             i++;
         }
         myLittleProgram[i] = '\0';
+        i++;
         while (i < maxSize && cmd[i] != '\0')
         {
             myLittleArguments[j] = cmd[i];
@@ -56,14 +58,30 @@ int main (int argc, char *argv[])
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
 
-        if (!strcmp(myLittleProgram, "exit"))
+        if (!strcmp(myLittleProgram, "exit") || (!strcmp(myLittleProgram, "quit")))
            return 0;
 
         else if (!strcmp(myLittleProgram, "mylittleenv"))
         {
-             char * env = getenv("PATH");
-             printf(env);
-             continue;
+            i = 0;
+            while (env[i] != 0)
+            {
+                printf("%s\n%d\n", env[i], i);
+                i++;
+            }
+            continue;
+        }
+
+        else if (!strcmp(myLittleProgram, "mylittlesetenv"))
+        {
+            printf("%s\n", myLittleArguments);
+            i = 0;
+            while (env[i] != 0)
+                i++;
+            env[i] = myLittleArguments;
+            printf("%s\n%d\n", env[i], i);
+            env[i + 1] = 0;
+            continue;
         }
 
         else
