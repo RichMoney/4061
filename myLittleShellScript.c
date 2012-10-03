@@ -86,11 +86,15 @@ int main (int argc, char **argv, char **envp)
             i = 0;
             while (env[i] != 0)
                 i++;
-            env[i] = myLittleArguments;
+            char *myLittleArg = (char *)malloc(maxSize);
+            strcpy(myLittleArg, myLittleArguments);
+            env[i] = myLittleArg;
             printf("%s\n%d\n", env[i], i);
             env[i + 1] = 0;
             continue;
         }
+        
+        
 
         else
         {
@@ -126,7 +130,3 @@ int main (int argc, char **argv, char **envp)
 
     return 0;
 }
-
-
-
-
