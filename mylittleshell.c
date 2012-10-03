@@ -1,5 +1,10 @@
 //
-//  mylittleshell.c
+//      __  ___         __    _ __  __  __        _____ __         ____
+//     /  |/  /_  __   / /   (_) /_/ /_/ /__     / ___// /_  ___  / / /
+//    / /|_/ / / / /  / /   / / __/ __/ / _ \    \__ \/ __ \/ _ \/ / / 
+//   / /  / / /_/ /  / /___/ / /_/ /_/ /  __/   ___/ / / / /  __/ / /  
+//  /_/  /_/\__, /  /_____/_/\__/\__/_/\___/   /____/_/ /_/\___/_/_/   
+//         /____/    
 //
 //
 //  Created by Brian Salter on 9/15/12.
@@ -26,7 +31,7 @@ int main (int argc, char **argv, char **envp)
 
     while (69)
     {
-        printf("Command: ");
+        printf("Command: "); //prompt
         fgets(cmd, maxSize, stdin);
         char myLittlePath[] = "/bin/";
         strcpy(myLittleArguments, "");
@@ -36,7 +41,7 @@ int main (int argc, char **argv, char **envp)
         if (newline != NULL)
             *newline = '\0';
 
-        printf("%s%s\n", "Executing command: ", cmd);
+        printf("%s%s\n", "Executing command: ", cmd); //feedback on command
 
         int i = 0;
         int j = 0;
@@ -54,22 +59,30 @@ int main (int argc, char **argv, char **envp)
             i++;
             j++;
         }
-
-        if (myLittleArguments[j-1] == '&')
+        
+        if (!strcmp(myLittleProgram, "find"))
         {
-           printf("%s\n", "in the background.");
+        //This is a hack to temporarily  fix an issue with find.
+        //printf("Executing Shell command");
+        system(cmd);
+        }
+        
+        //check for an ampersand at the end, remove it but flag if for background running.
+        else if (myLittleArguments[j-1] == '&')
+        {
+           printf("%s\n", " in the background.");
            isBackground = 1;
            myLittleArguments[j-1] = '\0';
         }
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
 
-
+           //Exits Gracefully, hopefully
         if (!strcmp(myLittleProgram, "exit") || (!strcmp(myLittleProgram, "quit")))
            return 0;
 
         else if (!strcmp(myLittleProgram, "mylittleenv"))
-        {
+        {    //Custom command for env
             i = 0;
             while (envp[i] != 0)
             {
@@ -86,7 +99,7 @@ int main (int argc, char **argv, char **envp)
         }
 
         else if (!strcmp(myLittleProgram, "myglobalenv"))
-        {
+        {    //Custom command for GlobalEnv
             i = 0;
             while (envp[i] != 0)
             {
@@ -94,7 +107,10 @@ int main (int argc, char **argv, char **envp)
                 i++;
             }
         }
-
+        
+        
+        
+        //Set ENV with some syntax checking.
         else if (!strcmp(myLittleProgram, "mylittlesetenv"))
         {
           int syntax = syntaxCheck(myLittleArguments);
