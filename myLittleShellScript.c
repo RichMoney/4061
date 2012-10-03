@@ -19,9 +19,9 @@ int main (int argc, char **argv, char **envp)
     char cmd[maxSize];
     char myLittleProgram[maxSize];
     char myLittleArguments[maxSize];
-    char *myLittleEnv[maxSize];
     pid_t pid;
-    char **env = envp;
+    char *env[maxSize];
+    int envSet = 0;
     int isBackground = 0;
 
     while (69)
@@ -30,7 +30,6 @@ int main (int argc, char **argv, char **envp)
         fgets(cmd, maxSize, stdin);
         char myLittlePath[] = "/bin/";
         strcpy(myLittleArguments, "");
-//      printf("%c%s%c\n%c%s%c\n%c%s%c\n", '|', myLittlePath, '|', '|', myLittleProgram, '|', '|', myLittleArguments, '|');
 
         // Replaces the newline with a null character for printf
         char *newline = strchr(cmd, '\n');
@@ -58,9 +57,9 @@ int main (int argc, char **argv, char **envp)
         
         if (myLittleArguments[j-1] == '&')
         {
-         printf("%s", "in the background.");
-         isBackground = 1;
-         myLittleArguments[j-1] = '\0';
+           printf("%s\n", "in the background.");
+           isBackground = 1;
+           myLittleArguments[j-1] = '\0';
         }
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
@@ -72,12 +71,28 @@ int main (int argc, char **argv, char **envp)
         else if (!strcmp(myLittleProgram, "mylittleenv"))
         {
             i = 0;
-            while (env[i] != 0)
+            while (envp[i] != 0)
             {
-                printf("%s\n%d\n", env[i], i);
+                printf("%s\n", envp[i]);
+                i++;
+            }
+            i = 0;
+            while (envSet && env[i] != 0)
+            {
+                printf("%s\n", env[i]);
                 i++;
             }
             continue;
+        }
+        
+        else if (!strcmp(myLittleProgram, "myglobalenv"))
+        {
+            i = 0;
+            while (envp[i] != 0)
+            {
+                printf("%s\n", envp[i]);
+                i++;
+            }
         }
 
         else if (!strcmp(myLittleProgram, "mylittlesetenv"))
@@ -91,10 +106,47 @@ int main (int argc, char **argv, char **envp)
             env[i] = myLittleArg;
             printf("%s\n%d\n", env[i], i);
             env[i + 1] = 0;
+            envSet = 1;
             continue;
         }
         
-        
+        else if (!strcmp(myLittleProgram, "mylittleexport"))
+        {
+            i = 0;
+            j = 0;
+            int found = 0;
+            while (envSet && env[i] != 0)
+            {
+                  while (69)
+                  {
+                        if (env[i][j] == '=')
+                        {
+                             found = 1;
+                             break;
+                        }
+                        else if (env[i][j] != myLittleArguments[j])
+                           break;
+                        j++;
+                  }
+                  if (found)
+                  {
+                     char *myLittleArg = (char *)malloc(maxSize);
+                     strcpy(myLittleArg, env[i]);
+                     i = 0;
+                     while (envp[i] != 0)
+                           i++;
+                     envp[i] = myLittleArg;
+                     envp[i + 1] = 0;
+                     break;
+                  }
+                  i++;
+                  j = 0;
+            }
+            if (!found)
+                printf("%s%s%s\n", "Could not find ", myLittleArguments, " anywhere!");
+            continue;
+        }
+
 
         else
         {
@@ -102,7 +154,6 @@ int main (int argc, char **argv, char **envp)
             if (pid == 0) //if child
             {
                 strcat(myLittlePath, myLittleProgram);
-//              printf("%c%s%c\n%c%s%c\n%c%s%c\n", '|', myLittlePath, '|', '|', myLittleProgram, '|', '|', myLittleArguments, '|');
                 if (!strcmp(myLittleArguments, ""))
                 {
                    int successcode = execlp(myLittlePath, myLittleProgram, NULL);
@@ -116,14 +167,14 @@ int main (int argc, char **argv, char **envp)
                         printf("%s%s%s\n", "Command '", myLittleProgram, "' not found!");
                    }
                 }
-                return 0;
+                continue;
             }
             else //if parent
             {
                 if (!isBackground) //if our command isn't supposed to be in the background
                     waitpid(pid); //wait for child
                 if (isBackground)
-                    printf("%s","\n");
+                    printf("\n");
             }
         }
     }
