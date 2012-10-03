@@ -97,19 +97,24 @@ int main (int argc, char **argv, char **envp)
 
         else if (!strcmp(myLittleProgram, "mylittlesetenv"))
         {
-            printf("%s\n", myLittleArguments);
+          int syntax = syntaxCheck(myLittleArguments);
+          if (syntax)
+            {
+            //printf("%s\n", myLittleArguments);
             i = 0;
             while (env[i] != 0)
                 i++;
             char *myLittleArg = (char *)malloc(maxSize);
             strcpy(myLittleArg, myLittleArguments);
             env[i] = myLittleArg;
-            printf("%s\n", env[i]);
+            //printf("%s\n%d\n", env[i], i);
             env[i + 1] = 0;
             envSet = 1;
             continue;
+            }
+          else
+            printf("Invalid mylittlesetenv syntax, please use name=value\n");
         }
-
         else if (!strcmp(myLittleProgram, "mylittleexport"))
         {
             i = 0;
@@ -192,4 +197,20 @@ int main (int argc, char **argv, char **envp)
     }
 
     return 0;
+}
+int syntaxCheck(char str[])
+{
+//printf("checking syntax\n");
+int i;
+int j;
+j = strlen(str);
+for (i = 0; i<j; ++i )
+  {
+    if (str[i] == '=')
+      {
+      //printf("syntax match\n");
+      return 1;
+      }
+  }
+  return 0;
 }
