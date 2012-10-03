@@ -59,16 +59,16 @@ int main (int argc, char **argv, char **envp)
             i++;
             j++;
         }
-        
+        /*
         if (!strcmp(myLittleProgram, "find"))
         {
         //This is a hack to temporarily  fix an issue with find.
         //printf("Executing Shell command");
         system(cmd);
         }
-        
+        */
         //check for an ampersand at the end, remove it but flag if for background running.
-        else if (myLittleArguments[j-1] == '&')
+        if (myLittleArguments[j-1] == '&')
         {
            printf("%s\n", " in the background.");
            isBackground = 1;
@@ -189,7 +189,7 @@ int main (int argc, char **argv, char **envp)
                 strcat(myLittlePath, myLittleProgram);
                 //strcat(myLittlePath, "/");
                 //strcat(myLittlePath, myLittleProgram);
-                //printf(myLittlePath);
+                printf(myLittlePath);
                 
                 argv[0] = myLittlePath;
                 //argv[1] = myLittleProgram;
@@ -201,6 +201,7 @@ int main (int argc, char **argv, char **envp)
                    }
                 }
                 else {
+                   strcat(myLittleProgram, " ");
                    strcat(myLittleProgram, myLittleArguments);
                    argv[1] = myLittleProgram;
                    printf(myLittleProgram);
