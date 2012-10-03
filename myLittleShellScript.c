@@ -37,7 +37,7 @@ int main (int argc, char **argv, char **envp)
             *newline = '\0';
 
         printf("%s%s\n", "Executing command: ", cmd);
-        
+
         int i = 0;
         int j = 0;
 
@@ -54,7 +54,7 @@ int main (int argc, char **argv, char **envp)
             i++;
             j++;
         }
-        
+
         if (myLittleArguments[j-1] == '&')
         {
            printf("%s\n", "in the background.");
@@ -64,7 +64,7 @@ int main (int argc, char **argv, char **envp)
         if (strcmp(myLittleArguments, ""))
            myLittleArguments[j] = '\0';
 
-                   
+
         if (!strcmp(myLittleProgram, "exit") || (!strcmp(myLittleProgram, "quit")))
            return 0;
 
@@ -84,7 +84,7 @@ int main (int argc, char **argv, char **envp)
             }
             continue;
         }
-        
+
         else if (!strcmp(myLittleProgram, "myglobalenv"))
         {
             i = 0;
@@ -109,7 +109,7 @@ int main (int argc, char **argv, char **envp)
             envSet = 1;
             continue;
         }
-        
+
         else if (!strcmp(myLittleProgram, "mylittleexport"))
         {
             i = 0;
@@ -147,6 +147,18 @@ int main (int argc, char **argv, char **envp)
             continue;
         }
 
+        else if (!strcmp(myLittleProgram, "mylittlebash"))
+        {
+            pid = fork();
+            if (pid == 0) {
+                int successcode = execve("./myLittleShellScript", NULL, envp);
+                if (successcode == -1)
+                    printf("mylittlebash failed! You probably didn't compile myLittleShellScript with the proper name!\n");
+            }
+            else
+                wait(pid);
+            continue;
+        }
 
         else
         {
