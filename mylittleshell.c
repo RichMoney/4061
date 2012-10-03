@@ -151,7 +151,7 @@ int main (int argc, char **argv, char **envp)
         {
             pid = fork();
             if (pid == 0) {
-                int successcode = execve("./mylittleshell", NULL, envp);
+                int successcode = execve("./myLittleShell", NULL, envp);
                 if (successcode == -1)
                     printf("mylittleshell failed! You probably didn't compile mylittleshell with the proper name!\n");
             }
