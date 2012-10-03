@@ -1,0 +1,245 @@
+Script started on Tue 02 Oct 2012 09:46:58 PM CDT
+salte031@kh1260-03 (/home/salte031/Documents/myLittleShellScript) % gcc -o myLit tleShell my
+myLittleScript.txt  myLittleShell*      mylittleshell.c     
+salte031@kh1260-03 (/home/salte031/Documents/myLittleShellScript) % gcc -o myLit tleShell mylittleshell.c 
+salte031@kh1260-03 (/home/salte031/Documents/myLittleShellScript) % ./myLittleSh ell 
+Welcome to My Little Shell!  Try not to disturb the ponies.
+
+Command: ls
+Executing command: ls
+a.out  myLittleScript.txt  myLittleShell  mylittleshell.c
+Command: pwd
+Executing command: pwd
+/home/salte031/Documents/myLittleShellScript
+Command: mkdir pants
+Executing command: mkdir pants
+Command: ls
+Executing command: ls
+a.out  myLittleScript.txt  myLittleShell  mylittleshell.c  pants
+Command: rmdir pants	
+Executing command: rmdir pants	
+rmdir: failed to remove `pants\t': No such file or directory
+Command: rmdir pants
+Executing command: rmdir pants
+Command: ls
+Executing command: ls
+a.out  myLittleScript.txt  myLittleShell  mylittleshell.c
+Command: asfd
+Executing command: asfd
+Command 'asfd' not found!
+Command: mylittleenv
+Executing command: mylittleenv
+USER=salte031
+LOGNAME=salte031
+HOME=/home/salte031
+MAIL=/var/mail/salte031
+SHELL=/usr/local/bin/tcsh
+SSH_CLIENT=107.2.93.165 65010 22
+SSH_CONNECTION=107.2.93.165 65010 128.101.38.3 22
+SSH_TTY=/dev/pts/7
+TERM=xterm
+DISPLAY=localhost:10.0
+LANG=en_US.UTF-8
+LANGUAGE=en_US:
+XDG_SESSION_COOKIE=86072dea9bd75b7b635dd7610000071e-1349220144.21595-1657191179
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=2
+PWD=/home/salte031/Documents/myLittleShellScript
+GROUP=student
+HOST=kh1260-03
+REMOTEHOST=c-107-2-93-165.hsd1.mn.comcast.net
+MODULESHOME=/soft/rko-modules/tcl
+MODULEPATH_modshare=/soft/rko-modules/modulefiles:2
+MODULEPATH=/soft/rko-modules/modulefiles
+LD_LIBRARY_PATH=/soft/scheme-7.7.1/jaunty64/lib:/soft/java/JMF1.02/lib:/usr/local/lib
+JDK_HOME=/soft/jdk-1.6.0_21
+LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+JAVA_HOME=/soft/jdk-1.6.0_21
+LOADEDMODULES=soft/gcc/4.5.2:java/jdk-1.6.0_21:perl/5.8.7:gnu:local:compilers/compilers:system:x11/R6.3:openwin:math/mathematica/8.0.1:scheme/mit:user:mozilla/firefox/2.0.0.11:soft/openoffice/3.0.1
+_LMFILES_=/soft/rko-modules/modulefiles/soft/gcc/4.5.2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:/soft/rko-modules/modulefiles/perl/5.8.7:/soft/rko-modules/modulefiles/gnu:/soft/rko-modules/modulefiles/local:/soft/rko-modules/modulefiles/compilers/compilers:/soft/rko-modules/modulefiles/system:/soft/rko-modules/modulefiles/x11/R6.3:/soft/rko-modules/modulefiles/openwin:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:/soft/rko-modules/modulefiles/scheme/mit:/soft/rko-modules/modulefiles/user:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1
+MANPATH_modshare=/soft/X11R6.3/man:1:/usr/man:1:/soft/perl5.8.7/man:1:/usr/X11R6/man:2:/usr/local/man:1:/usr/share/man:1:/opt/gnu/man:1:/soft/jdk-1.6.0.0_21/man:1:/soft/gcc-4.5.2/man:1:/opt/local/man:1
+LIBRARY_PATH_modshare=/usr/lib/x86_64-linux-gnu:2
+LD_LIBRARY_PATH_modshare=/soft/scheme-7.7.1/jaunty64/lib:2:/usr/local/lib:2:/soft/java/JMF1.02/lib:2
+CLASSPATH=/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:.:/soft/java/aspectj1.0/lib/aspectjrt.jar:/soft/java/aspectj1.0/lib/aspectjtools.jar:/soft/jdk-1.6.0_21/lib/classes.zip:/soft/java/JMF2.1.1/lib/jmf.jar
+LOADEDMODULES_modshare=compilers/compilers:2:soft/openoffice/3.0.1:2:openwin:2:perl/5.8.7:2:gnu:2:x11/R6.3:2:local:2:math/mathematica/8.0.1:2:java/jdk-1.6.0_21:2:system:2:soft/gcc/4.5.2:2:scheme/mit:2:mozilla/firefox/2.0.0.11:2:user:2
+_LMFILES__modshare=/soft/rko-modules/modulefiles/perl/5.8.7:2:/soft/rko-modules/modulefiles/x11/R6.3:2:/soft/rko-modules/modulefiles/compilers/compilers:2:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:2:/soft/rko-modules/modulefiles/system:2:/soft/rko-modules/modulefiles/soft/gcc/4.5.2:2:/soft/rko-modules/modulefiles/scheme/mit:2:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:2:/soft/rko-modules/modulefiles/user:2:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1:2:/soft/rko-modules/modulefiles/openwin:2:/soft/rko-modules/modulefiles/gnu:2:/soft/rko-modules/modulefiles/local:2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:2
+CLASSPATH_modshare=/soft/java/aspectj1.0/lib/aspectjrt.jar:2:/soft/java/JMF2.1.1/lib/jmf.jar:2:/soft/jdk-1.6.0_21/lib/classes.zip:2:/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:2:.:2:/soft/java/aspectj1.0/lib/aspectjtools.jar:2
+PATH_modshare=/soft/java/JMF2.1.1/bin:1:/usr/bin:1:/usr/X11R6/bin:1:/soft/openoffice/3.0.1/ubuntu1/usr/bin:1:/opt/gnu/bin:1:/usr/local/bin:1:/opt/local/bin:1:/soft/firefox/2.0.0.11/ubuntu1:1:/soft/gcc-4.5.2/ubuntuamd1/bin:1:/bin:1:/soft/math8.0.1/bin:1:/soft/java/jdbtool:1:/soft/scheme-7.7.1/jaunty64/bin:1:/sbin:1:/usr/sbin:1:/soft/java/aspectj1.0/bin:1:/soft/X11R6.3/bin:1:/soft/jdk-1.6.0_21/bin:1:/soft/perl5.8.7/bin:1:/soft/netbeans-6.8/ubuntu1/bin:1:/soft/vt-1.07:1
+PAGER=less
+LESS=eMs
+EDITOR=vi
+VISUAL=vi
+MANPATH=/soft/perl5.8.7/man:/soft/gcc-4.5.2/man:/soft/jdk-1.6.0.0_21/man:/opt/gnu/man:/opt/local/man:/usr/man:/usr/share/man:/usr/local/man:/usr/X11R6/man:/soft/X11R6.3/man
+PATH=/soft/openoffice/3.0.1/ubuntu1/usr/bin:/soft/firefox/2.0.0.11/ubuntu1:/soft/scheme-7.7.1/jaunty64/bin:/soft/perl5.8.7/bin:/soft/jdk-1.6.0_21/bin:/soft/gcc-4.5.2/ubuntuamd1/bin:/soft/java/jdbtool:/soft/java/aspectj1.0/bin:/soft/java/JMF2.1.1/bin:/soft/netbeans-6.8/ubuntu1/bin:/opt/gnu/bin:/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/soft/vt-1.07:/usr/X11R6/bin:/soft/X11R6.3/bin:/soft/math8.0.1/bin
+Command: mylittlesetenv BOB=123
+Executing command: mylittlesetenv BOB=123
+BOB=123
+BOB=123
+Command: mylittleenv
+Executing command: mylittleenv
+USER=salte031
+LOGNAME=salte031
+HOME=/home/salte031
+MAIL=/var/mail/salte031
+SHELL=/usr/local/bin/tcsh
+SSH_CLIENT=107.2.93.165 65010 22
+SSH_CONNECTION=107.2.93.165 65010 128.101.38.3 22
+SSH_TTY=/dev/pts/7
+TERM=xterm
+DISPLAY=localhost:10.0
+LANG=en_US.UTF-8
+LANGUAGE=en_US:
+XDG_SESSION_COOKIE=86072dea9bd75b7b635dd7610000071e-1349220144.21595-1657191179
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=2
+PWD=/home/salte031/Documents/myLittleShellScript
+GROUP=student
+HOST=kh1260-03
+REMOTEHOST=c-107-2-93-165.hsd1.mn.comcast.net
+MODULESHOME=/soft/rko-modules/tcl
+MODULEPATH_modshare=/soft/rko-modules/modulefiles:2
+MODULEPATH=/soft/rko-modules/modulefiles
+LD_LIBRARY_PATH=/soft/scheme-7.7.1/jaunty64/lib:/soft/java/JMF1.02/lib:/usr/local/lib
+JDK_HOME=/soft/jdk-1.6.0_21
+LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+JAVA_HOME=/soft/jdk-1.6.0_21
+LOADEDMODULES=soft/gcc/4.5.2:java/jdk-1.6.0_21:perl/5.8.7:gnu:local:compilers/compilers:system:x11/R6.3:openwin:math/mathematica/8.0.1:scheme/mit:user:mozilla/firefox/2.0.0.11:soft/openoffice/3.0.1
+_LMFILES_=/soft/rko-modules/modulefiles/soft/gcc/4.5.2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:/soft/rko-modules/modulefiles/perl/5.8.7:/soft/rko-modules/modulefiles/gnu:/soft/rko-modules/modulefiles/local:/soft/rko-modules/modulefiles/compilers/compilers:/soft/rko-modules/modulefiles/system:/soft/rko-modules/modulefiles/x11/R6.3:/soft/rko-modules/modulefiles/openwin:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:/soft/rko-modules/modulefiles/scheme/mit:/soft/rko-modules/modulefiles/user:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1
+MANPATH_modshare=/soft/X11R6.3/man:1:/usr/man:1:/soft/perl5.8.7/man:1:/usr/X11R6/man:2:/usr/local/man:1:/usr/share/man:1:/opt/gnu/man:1:/soft/jdk-1.6.0.0_21/man:1:/soft/gcc-4.5.2/man:1:/opt/local/man:1
+LIBRARY_PATH_modshare=/usr/lib/x86_64-linux-gnu:2
+LD_LIBRARY_PATH_modshare=/soft/scheme-7.7.1/jaunty64/lib:2:/usr/local/lib:2:/soft/java/JMF1.02/lib:2
+CLASSPATH=/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:.:/soft/java/aspectj1.0/lib/aspectjrt.jar:/soft/java/aspectj1.0/lib/aspectjtools.jar:/soft/jdk-1.6.0_21/lib/classes.zip:/soft/java/JMF2.1.1/lib/jmf.jar
+LOADEDMODULES_modshare=compilers/compilers:2:soft/openoffice/3.0.1:2:openwin:2:perl/5.8.7:2:gnu:2:x11/R6.3:2:local:2:math/mathematica/8.0.1:2:java/jdk-1.6.0_21:2:system:2:soft/gcc/4.5.2:2:scheme/mit:2:mozilla/firefox/2.0.0.11:2:user:2
+_LMFILES__modshare=/soft/rko-modules/modulefiles/perl/5.8.7:2:/soft/rko-modules/modulefiles/x11/R6.3:2:/soft/rko-modules/modulefiles/compilers/compilers:2:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:2:/soft/rko-modules/modulefiles/system:2:/soft/rko-modules/modulefiles/soft/gcc/4.5.2:2:/soft/rko-modules/modulefiles/scheme/mit:2:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:2:/soft/rko-modules/modulefiles/user:2:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1:2:/soft/rko-modules/modulefiles/openwin:2:/soft/rko-modules/modulefiles/gnu:2:/soft/rko-modules/modulefiles/local:2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:2
+CLASSPATH_modshare=/soft/java/aspectj1.0/lib/aspectjrt.jar:2:/soft/java/JMF2.1.1/lib/jmf.jar:2:/soft/jdk-1.6.0_21/lib/classes.zip:2:/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:2:.:2:/soft/java/aspectj1.0/lib/aspectjtools.jar:2
+PATH_modshare=/soft/java/JMF2.1.1/bin:1:/usr/bin:1:/usr/X11R6/bin:1:/soft/openoffice/3.0.1/ubuntu1/usr/bin:1:/opt/gnu/bin:1:/usr/local/bin:1:/opt/local/bin:1:/soft/firefox/2.0.0.11/ubuntu1:1:/soft/gcc-4.5.2/ubuntuamd1/bin:1:/bin:1:/soft/math8.0.1/bin:1:/soft/java/jdbtool:1:/soft/scheme-7.7.1/jaunty64/bin:1:/sbin:1:/usr/sbin:1:/soft/java/aspectj1.0/bin:1:/soft/X11R6.3/bin:1:/soft/jdk-1.6.0_21/bin:1:/soft/perl5.8.7/bin:1:/soft/netbeans-6.8/ubuntu1/bin:1:/soft/vt-1.07:1
+PAGER=less
+LESS=eMs
+EDITOR=vi
+VISUAL=vi
+MANPATH=/soft/perl5.8.7/man:/soft/gcc-4.5.2/man:/soft/jdk-1.6.0.0_21/man:/opt/gnu/man:/opt/local/man:/usr/man:/usr/share/man:/usr/local/man:/usr/X11R6/man:/soft/X11R6.3/man
+PATH=/soft/openoffice/3.0.1/ubuntu1/usr/bin:/soft/firefox/2.0.0.11/ubuntu1:/soft/scheme-7.7.1/jaunty64/bin:/soft/perl5.8.7/bin:/soft/jdk-1.6.0_21/bin:/soft/gcc-4.5.2/ubuntuamd1/bin:/soft/java/jdbtool:/soft/java/aspectj1.0/bin:/soft/java/JMF2.1.1/bin:/soft/netbeans-6.8/ubuntu1/bin:/opt/gnu/bin:/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/soft/vt-1.07:/usr/X11R6/bin:/soft/X11R6.3/bin:/soft/math8.0.1/bin
+BOB=123
+Command: mylittlesetenv JANE=1234
+Executing command: mylittlesetenv JANE=1234
+JANE=1234
+JANE=1234
+Command: mylittleenv
+Executing command: mylittleenv
+USER=salte031
+LOGNAME=salte031
+HOME=/home/salte031
+MAIL=/var/mail/salte031
+SHELL=/usr/local/bin/tcsh
+SSH_CLIENT=107.2.93.165 65010 22
+SSH_CONNECTION=107.2.93.165 65010 128.101.38.3 22
+SSH_TTY=/dev/pts/7
+TERM=xterm
+DISPLAY=localhost:10.0
+LANG=en_US.UTF-8
+LANGUAGE=en_US:
+XDG_SESSION_COOKIE=86072dea9bd75b7b635dd7610000071e-1349220144.21595-1657191179
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=2
+PWD=/home/salte031/Documents/myLittleShellScript
+GROUP=student
+HOST=kh1260-03
+REMOTEHOST=c-107-2-93-165.hsd1.mn.comcast.net
+MODULESHOME=/soft/rko-modules/tcl
+MODULEPATH_modshare=/soft/rko-modules/modulefiles:2
+MODULEPATH=/soft/rko-modules/modulefiles
+LD_LIBRARY_PATH=/soft/scheme-7.7.1/jaunty64/lib:/soft/java/JMF1.02/lib:/usr/local/lib
+JDK_HOME=/soft/jdk-1.6.0_21
+LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+JAVA_HOME=/soft/jdk-1.6.0_21
+LOADEDMODULES=soft/gcc/4.5.2:java/jdk-1.6.0_21:perl/5.8.7:gnu:local:compilers/compilers:system:x11/R6.3:openwin:math/mathematica/8.0.1:scheme/mit:user:mozilla/firefox/2.0.0.11:soft/openoffice/3.0.1
+_LMFILES_=/soft/rko-modules/modulefiles/soft/gcc/4.5.2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:/soft/rko-modules/modulefiles/perl/5.8.7:/soft/rko-modules/modulefiles/gnu:/soft/rko-modules/modulefiles/local:/soft/rko-modules/modulefiles/compilers/compilers:/soft/rko-modules/modulefiles/system:/soft/rko-modules/modulefiles/x11/R6.3:/soft/rko-modules/modulefiles/openwin:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:/soft/rko-modules/modulefiles/scheme/mit:/soft/rko-modules/modulefiles/user:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1
+MANPATH_modshare=/soft/X11R6.3/man:1:/usr/man:1:/soft/perl5.8.7/man:1:/usr/X11R6/man:2:/usr/local/man:1:/usr/share/man:1:/opt/gnu/man:1:/soft/jdk-1.6.0.0_21/man:1:/soft/gcc-4.5.2/man:1:/opt/local/man:1
+LIBRARY_PATH_modshare=/usr/lib/x86_64-linux-gnu:2
+LD_LIBRARY_PATH_modshare=/soft/scheme-7.7.1/jaunty64/lib:2:/usr/local/lib:2:/soft/java/JMF1.02/lib:2
+CLASSPATH=/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:.:/soft/java/aspectj1.0/lib/aspectjrt.jar:/soft/java/aspectj1.0/lib/aspectjtools.jar:/soft/jdk-1.6.0_21/lib/classes.zip:/soft/java/JMF2.1.1/lib/jmf.jar
+LOADEDMODULES_modshare=compilers/compilers:2:soft/openoffice/3.0.1:2:openwin:2:perl/5.8.7:2:gnu:2:x11/R6.3:2:local:2:math/mathematica/8.0.1:2:java/jdk-1.6.0_21:2:system:2:soft/gcc/4.5.2:2:scheme/mit:2:mozilla/firefox/2.0.0.11:2:user:2
+_LMFILES__modshare=/soft/rko-modules/modulefiles/perl/5.8.7:2:/soft/rko-modules/modulefiles/x11/R6.3:2:/soft/rko-modules/modulefiles/compilers/compilers:2:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:2:/soft/rko-modules/modulefiles/system:2:/soft/rko-modules/modulefiles/soft/gcc/4.5.2:2:/soft/rko-modules/modulefiles/scheme/mit:2:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:2:/soft/rko-modules/modulefiles/user:2:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1:2:/soft/rko-modules/modulefiles/openwin:2:/soft/rko-modules/modulefiles/gnu:2:/soft/rko-modules/modulefiles/local:2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:2
+CLASSPATH_modshare=/soft/java/aspectj1.0/lib/aspectjrt.jar:2:/soft/java/JMF2.1.1/lib/jmf.jar:2:/soft/jdk-1.6.0_21/lib/classes.zip:2:/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:2:.:2:/soft/java/aspectj1.0/lib/aspectjtools.jar:2
+PATH_modshare=/soft/java/JMF2.1.1/bin:1:/usr/bin:1:/usr/X11R6/bin:1:/soft/openoffice/3.0.1/ubuntu1/usr/bin:1:/opt/gnu/bin:1:/usr/local/bin:1:/opt/local/bin:1:/soft/firefox/2.0.0.11/ubuntu1:1:/soft/gcc-4.5.2/ubuntuamd1/bin:1:/bin:1:/soft/math8.0.1/bin:1:/soft/java/jdbtool:1:/soft/scheme-7.7.1/jaunty64/bin:1:/sbin:1:/usr/sbin:1:/soft/java/aspectj1.0/bin:1:/soft/X11R6.3/bin:1:/soft/jdk-1.6.0_21/bin:1:/soft/perl5.8.7/bin:1:/soft/netbeans-6.8/ubuntu1/bin:1:/soft/vt-1.07:1
+PAGER=less
+LESS=eMs
+EDITOR=vi
+VISUAL=vi
+MANPATH=/soft/perl5.8.7/man:/soft/gcc-4.5.2/man:/soft/jdk-1.6.0.0_21/man:/opt/gnu/man:/opt/local/man:/usr/man:/usr/share/man:/usr/local/man:/usr/X11R6/man:/soft/X11R6.3/man
+PATH=/soft/openoffice/3.0.1/ubuntu1/usr/bin:/soft/firefox/2.0.0.11/ubuntu1:/soft/scheme-7.7.1/jaunty64/bin:/soft/perl5.8.7/bin:/soft/jdk-1.6.0_21/bin:/soft/gcc-4.5.2/ubuntuamd1/bin:/soft/java/jdbtool:/soft/java/aspectj1.0/bin:/soft/java/JMF2.1.1/bin:/soft/netbeans-6.8/ubuntu1/bin:/opt/gnu/bin:/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/soft/vt-1.07:/usr/X11R6/bin:/soft/X11R6.3/bin:/soft/math8.0.1/bin
+BOB=123
+JANE=1234
+Command: mylittleexport BOB
+Executing command: mylittleexport BOB
+Command: mylittleshell
+Executing command: mylittleshell
+Welcome to My Little Shell!  Try not to disturb the ponies.
+
+Command: mylittleenv
+Executing command: mylittleenv
+USER=salte031
+LOGNAME=salte031
+HOME=/home/salte031
+MAIL=/var/mail/salte031
+SHELL=/usr/local/bin/tcsh
+SSH_CLIENT=107.2.93.165 65010 22
+SSH_CONNECTION=107.2.93.165 65010 128.101.38.3 22
+SSH_TTY=/dev/pts/7
+TERM=xterm
+DISPLAY=localhost:10.0
+LANG=en_US.UTF-8
+LANGUAGE=en_US:
+XDG_SESSION_COOKIE=86072dea9bd75b7b635dd7610000071e-1349220144.21595-1657191179
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=2
+PWD=/home/salte031/Documents/myLittleShellScript
+GROUP=student
+HOST=kh1260-03
+REMOTEHOST=c-107-2-93-165.hsd1.mn.comcast.net
+MODULESHOME=/soft/rko-modules/tcl
+MODULEPATH_modshare=/soft/rko-modules/modulefiles:2
+MODULEPATH=/soft/rko-modules/modulefiles
+LD_LIBRARY_PATH=/soft/scheme-7.7.1/jaunty64/lib:/soft/java/JMF1.02/lib:/usr/local/lib
+JDK_HOME=/soft/jdk-1.6.0_21
+LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+JAVA_HOME=/soft/jdk-1.6.0_21
+LOADEDMODULES=soft/gcc/4.5.2:java/jdk-1.6.0_21:perl/5.8.7:gnu:local:compilers/compilers:system:x11/R6.3:openwin:math/mathematica/8.0.1:scheme/mit:user:mozilla/firefox/2.0.0.11:soft/openoffice/3.0.1
+_LMFILES_=/soft/rko-modules/modulefiles/soft/gcc/4.5.2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:/soft/rko-modules/modulefiles/perl/5.8.7:/soft/rko-modules/modulefiles/gnu:/soft/rko-modules/modulefiles/local:/soft/rko-modules/modulefiles/compilers/compilers:/soft/rko-modules/modulefiles/system:/soft/rko-modules/modulefiles/x11/R6.3:/soft/rko-modules/modulefiles/openwin:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:/soft/rko-modules/modulefiles/scheme/mit:/soft/rko-modules/modulefiles/user:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1
+MANPATH_modshare=/soft/X11R6.3/man:1:/usr/man:1:/soft/perl5.8.7/man:1:/usr/X11R6/man:2:/usr/local/man:1:/usr/share/man:1:/opt/gnu/man:1:/soft/jdk-1.6.0.0_21/man:1:/soft/gcc-4.5.2/man:1:/opt/local/man:1
+LIBRARY_PATH_modshare=/usr/lib/x86_64-linux-gnu:2
+LD_LIBRARY_PATH_modshare=/soft/scheme-7.7.1/jaunty64/lib:2:/usr/local/lib:2:/soft/java/JMF1.02/lib:2
+CLASSPATH=/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:.:/soft/java/aspectj1.0/lib/aspectjrt.jar:/soft/java/aspectj1.0/lib/aspectjtools.jar:/soft/jdk-1.6.0_21/lib/classes.zip:/soft/java/JMF2.1.1/lib/jmf.jar
+LOADEDMODULES_modshare=compilers/compilers:2:soft/openoffice/3.0.1:2:openwin:2:perl/5.8.7:2:gnu:2:x11/R6.3:2:local:2:math/mathematica/8.0.1:2:java/jdk-1.6.0_21:2:system:2:soft/gcc/4.5.2:2:scheme/mit:2:mozilla/firefox/2.0.0.11:2:user:2
+_LMFILES__modshare=/soft/rko-modules/modulefiles/perl/5.8.7:2:/soft/rko-modules/modulefiles/x11/R6.3:2:/soft/rko-modules/modulefiles/compilers/compilers:2:/soft/rko-modules/modulefiles/math/mathematica/8.0.1:2:/soft/rko-modules/modulefiles/system:2:/soft/rko-modules/modulefiles/soft/gcc/4.5.2:2:/soft/rko-modules/modulefiles/scheme/mit:2:/soft/rko-modules/modulefiles/mozilla/firefox/2.0.0.11:2:/soft/rko-modules/modulefiles/user:2:/soft/rko-modules/modulefiles/soft/openoffice/3.0.1:2:/soft/rko-modules/modulefiles/openwin:2:/soft/rko-modules/modulefiles/gnu:2:/soft/rko-modules/modulefiles/local:2:/soft/rko-modules/modulefiles/java/jdk-1.6.0_21:2
+CLASSPATH_modshare=/soft/java/aspectj1.0/lib/aspectjrt.jar:2:/soft/java/JMF2.1.1/lib/jmf.jar:2:/soft/jdk-1.6.0_21/lib/classes.zip:2:/soft/java/JGL-3.1.0-for-JDK-1.1/lib/jgl3.1.0.jar:2:.:2:/soft/java/aspectj1.0/lib/aspectjtools.jar:2
+PATH_modshare=/soft/java/JMF2.1.1/bin:1:/usr/bin:1:/usr/X11R6/bin:1:/soft/openoffice/3.0.1/ubuntu1/usr/bin:1:/opt/gnu/bin:1:/usr/local/bin:1:/opt/local/bin:1:/soft/firefox/2.0.0.11/ubuntu1:1:/soft/gcc-4.5.2/ubuntuamd1/bin:1:/bin:1:/soft/math8.0.1/bin:1:/soft/java/jdbtool:1:/soft/scheme-7.7.1/jaunty64/bin:1:/sbin:1:/usr/sbin:1:/soft/java/aspectj1.0/bin:1:/soft/X11R6.3/bin:1:/soft/jdk-1.6.0_21/bin:1:/soft/perl5.8.7/bin:1:/soft/netbeans-6.8/ubuntu1/bin:1:/soft/vt-1.07:1
+PAGER=less
+LESS=eMs
+EDITOR=vi
+VISUAL=vi
+MANPATH=/soft/perl5.8.7/man:/soft/gcc-4.5.2/man:/soft/jdk-1.6.0.0_21/man:/opt/gnu/man:/opt/local/man:/usr/man:/usr/share/man:/usr/local/man:/usr/X11R6/man:/soft/X11R6.3/man
+PATH=/soft/openoffice/3.0.1/ubuntu1/usr/bin:/soft/firefox/2.0.0.11/ubuntu1:/soft/scheme-7.7.1/jaunty64/bin:/soft/perl5.8.7/bin:/soft/jdk-1.6.0_21/bin:/soft/gcc-4.5.2/ubuntuamd1/bin:/soft/java/jdbtool:/soft/java/aspectj1.0/bin:/soft/java/JMF2.1.1/bin:/soft/netbeans-6.8/ubuntu1/bin:/opt/gnu/bin:/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/soft/vt-1.07:/usr/X11R6/bin:/soft/X11R6.3/bin:/soft/math8.0.1/bin
+BOB=123
+Command: exit
+Executing command: exit
+Command: quit
+Executing command: quit
+Command: quit
+Executing command: quit
+salte031@kh1260-03 (/home/salte031/Documents/myLittleShellScript) % exit
+exit
+
+Script done on Tue 02 Oct 2012 09:50:16 PM CDT
