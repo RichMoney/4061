@@ -1,5 +1,5 @@
 //
-//  myLittleShellScript.c
+//  mylittleshell.c
 //
 //
 //  Created by Brian Salter on 9/15/12.
@@ -147,13 +147,13 @@ int main (int argc, char **argv, char **envp)
             continue;
         }
 
-        else if (!strcmp(myLittleProgram, "mylittlebash"))
+        else if (!strcmp(myLittleProgram, "mylittleshell"))
         {
             pid = fork();
             if (pid == 0) {
-                int successcode = execve("./myLittleShellScript", NULL, envp);
+                int successcode = execve("./mylittleshell", NULL, envp);
                 if (successcode == -1)
-                    printf("mylittlebash failed! You probably didn't compile myLittleShellScript with the proper name!\n");
+                    printf("mylittleshell failed! You probably didn't compile mylittleshell with the proper name!\n");
             }
             else
                 wait(pid);
