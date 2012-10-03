@@ -104,7 +104,7 @@ int main (int argc, char **argv, char **envp)
             char *myLittleArg = (char *)malloc(maxSize);
             strcpy(myLittleArg, myLittleArguments);
             env[i] = myLittleArg;
-            printf("%s\n%d\n", env[i], i);
+            printf("%s\n", env[i]);
             env[i + 1] = 0;
             envSet = 1;
             continue;
