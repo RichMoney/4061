@@ -185,17 +185,26 @@ int main (int argc, char **argv, char **envp)
         {
             pid = fork(); //create child
             if (pid == 0) //if child
-            {
+            {                   
                 strcat(myLittlePath, myLittleProgram);
+                //strcat(myLittlePath, "/");
+                //strcat(myLittlePath, myLittleProgram);
+                //printf(myLittlePath);
+                
+                argv[0] = myLittlePath;
+                //argv[1] = myLittleProgram;
                 if (!strcmp(myLittleArguments, ""))
                 {
-                   int successcode = execlp(myLittlePath, myLittleProgram, NULL);
+                   int successcode = execvp(argv[0], argv);
                    if (successcode == -1) {
                         printf("%s%s%s\n", "Command '", myLittleProgram, "' not found!");
                    }
                 }
                 else {
-                   int successcode = execlp(myLittlePath, myLittleProgram, myLittleArguments, NULL);
+                   strcat(myLittleProgram, myLittleArguments);
+                   argv[1] = myLittleProgram;
+                   printf(myLittleProgram);
+                   int successcode = execvp(argv[0],argv);
                    if (successcode == -1) {
                         printf("%s%s%s\n", "Command '", myLittleProgram, "' not found!");
                    }
